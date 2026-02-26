@@ -1,7 +1,7 @@
 # Incident: Missing Tags on Resource
 
 ## Incident Summary
-A resource (Storage Account) was created without mandatory organizational tags, resulting in governance non-compliance and improper cost tracking.
+A resource was created without mandatory organizational tags, resulting in governance non-compliance and improper cost tracking.
 
 ---
 
