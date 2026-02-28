@@ -77,8 +77,10 @@ Provide secure network communication and environment isolation.
 ## Phase 3 — Compute Layer
 Activities:
 - Deploy Windows Virtual Machine
-- Deploy Linux Virtual Machine
+- Deploy Linux Virtual Machine (Nginx installation)
 - Configure Azure Bastion access
+- Application Gateway
+- NSG's for subnets
 
 Purpose:
 Provide compute infrastructure for applications and administration.
