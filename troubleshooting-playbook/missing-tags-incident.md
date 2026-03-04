@@ -148,3 +148,21 @@ Mandatory tagging is now enforced through:
 - Compliance validation completed
 
 This implementation reflects real-world Azure Administrator governance practices.
+
+
+## Governance Improvement (v2 Strategy)
+
+Original strategy used:
+- Require tag on resources (Deny)
+
+Issue:
+System-created resources (NIC, DNS links) failed deployment.
+
+Improved strategy:
+- Require tag on resource groups (Deny)
+- Inherit tag from resource group (Modify)
+
+Outcome:
+Automatic tag inheritance
+No PaaS deployment failures
+Enterprise-grade governance design
