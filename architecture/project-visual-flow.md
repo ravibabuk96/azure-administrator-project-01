@@ -22,23 +22,25 @@ performed during the project.
 
 # 2. Visual Flow of the Project
 
-The Azure infrastructure will be implemented in the following order:
+# 2. Visual Flow of the Project
 
 Foundation & Governance
         ↓
 Networking (Hub-Spoke Architecture)
         ↓
-Compute Layer (Virtual Machines)
+Compute Layer (Virtual Machines + Bastion)
         ↓
 Platform Services (App Service + SQL + Storage)
         ↓
-Security & Identity
+Serverless Processing (Azure Functions)
         ↓
-Monitoring & Logging
+Security & Identity (RBAC + Key Vault + Managed Identity)
         ↓
-Backup & Disaster Recovery
+Monitoring & Observability (Azure Monitor + Log Analytics)
         ↓
-Automation & Operations
+Backup & Disaster Recovery (Recovery Services Vault)
+        ↓
+Automation & Operations (Azure Automation Runbooks)
         ↓
 Incident Simulation & Troubleshooting
 
@@ -92,11 +94,24 @@ Activities:
 - Deploy Azure App Service
 - Deploy Azure SQL Database
 - Create Azure Storage Account
+- Configure Application Gateway for application routing
 
 Purpose:
-Host application, database, and storage services.
+Provide scalable application hosting, database services, and object storage for application workloads.
 
 ---
+
+## Phase 4.5 — Serverless Compute Layer
+Activities:
+- Deploy Azure Function App
+- Configure Blob Storage trigger
+- Process uploaded files using event-driven execution
+- Store processed data in Azure SQL Database
+
+Purpose:
+Implement event-driven serverless processing using Azure Functions.
+
+----
 
 ## Phase 5 — Security & Identity
 Activities:
@@ -165,11 +180,16 @@ Develop real-world troubleshooting experience similar to production environments
 After completing this project, the Azure environment will include:
 
 - Hub-Spoke network architecture
-- Virtual machines and platform services
-- Monitoring and logging configuration
-- Backup and disaster recovery setup
-- Identity and governance controls
-- Automation runbooks
-- Troubleshooting playbook documentation
+- Secure virtual machine access using Azure Bastion
+- Web application hosting with Azure App Service
+- Event-driven serverless processing using Azure Functions
+- Managed database using Azure SQL Database
+- Secure secret management using Azure Key Vault
+- Private endpoint access to platform services
+- Centralized monitoring using Azure Monitor and Log Analytics
+- Automated backup using Recovery Services Vault
+- Operational automation using Azure Automation runbooks
+- Documented troubleshooting playbooks
+
 
 This project demonstrates practical Azure Administrator experience aligned with industry standards.
